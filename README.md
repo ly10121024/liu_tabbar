@@ -20,9 +20,9 @@ Vue.use(jmhcTabbar)
 
 ```
 export default {
-    data() {
-        return {
-            midButton:true,
+	data() {
+		return {
+			midButton:true,
 			tabbarStyle:{
 				height:'60px',
 				boxShadow:' 0 -1px 6px red'
@@ -43,8 +43,8 @@ export default {
 					selectedIconPath: '../../static/fuwu2.png' 
 				},
 			]
-        }
-    },
+		}
+	},
 }
 ```
 
