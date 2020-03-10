@@ -1,0 +1,24 @@
+{
+	"name": "jmhc-tabbar",
+	"version": "0.1.0",
+	"description": "A simple roving tabbar component based on uniapp",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jumihc-company/uni-tabbar.git"
+	},
+	"keywords": [
+		"uni",
+		"uniapp",
+		"tabbar"
+	],
+	"author": "jumihc",
+	"dependencies": {
+		"@dcloudio/uni-app-plus": "latest",
+		"@dcloudio/uni-h5": "latest"
+	},
+	"browserslist": [
+		"Android >= 4",
+		"ios >= 8"
+	]
+}
