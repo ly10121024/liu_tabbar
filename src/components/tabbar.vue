@@ -1,6 +1,6 @@
 <template>
 	<view class="l-footer" :style="tabbar">
-		<text class="l-footer--circle" :style="circleStyle"></text>
+		<text class="l-footer--circle" :style="circleStyle" v-if="midButton && list.length % 2 == 1"></text>
 		<view class="l-footer-tabbar c-tabbar">
 			<navigator
 				v-for="(item, index) in list"
@@ -9,9 +9,9 @@
 				hover-class="none"
 				open-type="redirect"
 				:class="[{ 'c-tabbar__item--big': midButton && index == (list.length - 1) / 2 }, 'c-tabbar__item']"
-				:style="{ top: '-' + (imgStyle.midHeight - imgStyle.imgHeight) / 2 + 'px' }"
+				:style="{ top: midButton && index == (list.length - 1) / 2 ? '-' + (imgStyle.midHeight - imgStyle.imgHeight) / 2 + 'px' : 0 }"
 			>
-				<view class="o-tabbar__badge" v-if="item.hasBadge"><slot></slot></view>
+				<text class="o-tabbar__badge" v-if="item.badge" :style="badgeStyle">{{ item.badge }}</text>
 				<image
 					class="o-tabbar__img"
 					:src="item.currentPage ? item.selectedIconPath : item.iconPath"
@@ -74,6 +74,10 @@ export default {
 					midHeight: 51 //突起图片的高度
 				};
 			}
+		},
+		// 角标样式
+		badgeStyle: {
+			type: Object
 		}
 	},
 	data() {
@@ -166,13 +170,22 @@ export default {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
 		&--big {
 			position: relative;
 		}
 		.o-tabbar__badge {
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: -30rpx;
+			right: -20rpx;
+			width: 30rpx;
+			height: 30rpx;
+			line-height: 30rpx;
+			border-radius: 50%;
+			background: red;
+			color: white;
+			font-size: 12px;
+			text-align: center;
 		}
 	}
 }

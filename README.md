@@ -60,16 +60,17 @@ export default {
 | circleStyle | Object  |        |       凸起圆的样式（如下）       |          |
 |  textStyle  | Object  |        |      list中文本样式（如下）      |          |
 |  imgStyle   | Object  |        |         图片样式（如下）         |          |
+| badgeStyle  | Object  |        |   角标样式（支持css所有样式）    |          |
 
 list属性说明：
 
-|       属性       |  类型   |            值            |                 说明                 |
-| :--------------: | :-----: | :----------------------: | :----------------------------------: |
-|     hasBadge     | Boolean |          false           | 是否含有角标（角标内容自行插入slot） |
-|     pagePath     | String  |  '/pages/index/index2'   | 页面路径，必须在 pages .json中先定义 |
-|       text       | String  |          "ssss"          |            tab按钮上文字             |
-|     iconPath     | String  | '../../static/fuwu1.png' |               图片路径               |
-| selectedIconPath | String  | '../../static/fuwu2.png' |            选中时图片途径            |
+|       属性       |  类型  |            值            |                  说明                  |
+| :--------------: | :----: | :----------------------: | :------------------------------------: |
+|      badge       | Number |                          | 如果有角标传入角标的值，没有不写该参数 |
+|     pagePath     | String |  '/pages/index/index2'   |  页面路径，必须在 pages .json中先定义  |
+|       text       | String |          "ssss"          |             tab按钮上文字              |
+|     iconPath     | String | '../../static/fuwu1.png' |                图片路径                |
+| selectedIconPath | String | '../../static/fuwu2.png' |             选中时图片途径             |
 
 circleStyle属性说明：
 
