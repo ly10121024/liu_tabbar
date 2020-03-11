@@ -8,7 +8,7 @@
 				:url="item.pagePath"
 				hover-class="none"
 				open-type="redirect"
-				:class="[{ 'c-tabbar__item--big': midButton && index == (list.length - 1) / 2 }, 'c-tabbar__item']"
+				class="c-tabbar__item"
 				:style="{ top: midButton && index == (list.length - 1) / 2 ? '-' + (imgStyle.midHeight - imgStyle.imgHeight) / 2 + 'px' : 0 }"
 			>
 				<text class="o-tabbar__badge" v-if="item.badge" :style="badgeStyle">{{ item.badge }}</text>
@@ -171,9 +171,6 @@ export default {
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		&--big {
-			position: relative;
-		}
 		.o-tabbar__badge {
 			position: absolute;
 			top: -30rpx;
